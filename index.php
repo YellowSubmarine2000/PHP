@@ -14,7 +14,7 @@ $leftmenu = [
     ['link'=>'Test', 'href'=>'test/index.php'],
     ['link'=>'Контакты', 'href'=>'index.php?id=contact'],
     ['link'=>'Таблица умножения', 'href'=>'index.php?id=table'],
-    ['link'=>'Кальклятор', 'href'=>'index.php?id=calc'],
+    ['link'=>'q1', 'href'=>'test/q1.php'],
     ['link'=>'Cookie', 'href'=>'inc/cookie.inc.php']
 ];
 //заголовок

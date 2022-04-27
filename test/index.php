@@ -1,12 +1,12 @@
 <?
 session_start();
-if (isset($_SESSION['test']) && !isset($_POST['q'])) {
+if (!isset($_SESSION['test']) && !isset($_POST['q'])) {
     //Проверка запущена ли сессия и задана ли переменная
     $q= 0; //№ вопроса
     $title = 'Answer the questions';
 }else{
     //Создаем сессионную переменую test, содержащую массив ответов
-    if($_POST['q'] !=1)
+    if($_POST['q'] != 1 )
         $_SESSION['test'][] = $_POST['answer'];
     $q = $_POST['q'];
     $title = $_POST['title'];
@@ -15,20 +15,21 @@ if (isset($_SESSION['test']) && !isset($_POST['q'])) {
 ?>
 <h1><?$title?></h1>
 <?
-//В зависимости от номера , переходим на нужную страницу
+echo $q;
+//В зависимости от номера , подключаем файл с вопросами
 switch($q){
     case 0:
-        header('Location: start.php');
+        include 'start.php';
         break;
     case 1:
-        header('Location: q1.php');
+        include 'q1.php';
         break;
     case 2:
-        header('Location: q2.php');
+        include 'q2.php';
         break;
     case 3:
-        header('Location: q3.php');
+        include 'q3.php';
         break;
     default:
-    include 'result.php';
+        include 'result.php';
 }

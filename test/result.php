@@ -1,3 +1,4 @@
+<a href="../index.php">Home</a>
 <?
 $result = 0; //Кол- во верных ответов
 if (isset($_SESSION['test'])){
@@ -13,3 +14,5 @@ if (isset($_SESSION['test'])){
     session_destroy();
 }
 echo "$result верных ответов";
+
+echo $q;
