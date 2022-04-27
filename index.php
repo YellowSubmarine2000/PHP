@@ -8,7 +8,6 @@ $array = [1,2,3,4,5,6,7,8,9,0];
 
 $a= my_count($array);
 
-echo "Кол-во элементов массива: $a  ";
 // изменение запроса при помощи метода _GET
 $leftmenu = [
     ['link'=>'Домой', 'href'=>'index.php'],
@@ -44,8 +43,6 @@ case 'cookie':
     $header= 'cookie№';
     break;
 }
-echo "Название страницы: $title ";
-echo "Название заголовка: $header ";
    
 
     drawMenu($leftmenu);
@@ -57,7 +54,6 @@ echo "Название заголовка: $header ";
     echo "$serv ,  PHP: $ver , $os ";
 
     ?>
-    <a href="inc/cookie.inc.php">Cookie</a>
 
 <?
 
